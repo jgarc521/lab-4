@@ -72,7 +72,7 @@ uiOutput("insight_text")
 
 ## Plots {.tabset}
 
-### By Country
+### **By Country**
 
 ```{r}
 leafletOutput("science_map", height = "600px")
@@ -175,7 +175,7 @@ output$insight_text <- renderUI({
 
 ```
 
-### By Region
+### **By Region**
 
 ```{r}
 # region pct
@@ -262,7 +262,7 @@ ggplotly(p, tooltip = "text") |>
     legend = list(
       orientation = "h",
       x = 0.5,
-      y = 1.06,
+      y = 1.10,
       xanchor = "center",
       font = list(size = 13)
     ),
@@ -276,11 +276,11 @@ ggplotly(p, tooltip = "text") |>
 
 ```{r}
 #| title: Wellcome Global Monitor Report 2018 Data
-new_df <- head(df, 100)
+new_df <- head(full_data, 100)
 knitr::kable(new_df)
 ```
 
-## About the Data {height="15%"}
+## About the Data {height="20%"}
 
 ::: card
 ### [📊 Something about the Data](https://wellcome.org/reports/wellcome-global-monitor/2018)
